@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@microfrontends/mfs-ui": ["libs/mfs-ui/src/index.ts"]
+      "@microfrontends/mfs-ui": ["libs/mfs-ui/src/index.ts"],
+      "identity/Routes": ["apps/identity/src/app/remote-entry/entry.routes.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
