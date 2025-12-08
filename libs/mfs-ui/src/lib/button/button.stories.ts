@@ -7,6 +7,31 @@ const meta: Meta<Button> = {
   component: Button,
   title: 'Button',
   tags: ['autodocs'],
+  argTypes: {
+    variant: {
+      control: 'select',
+      options: ['primary', 'secondary', 'outline', 'ghost', 'danger'],
+      description: 'The variant of the button',
+    },
+    size: {
+      control: 'select',
+      options: ['sm', 'md', 'lg'],
+      description: 'The size of the button',
+    },
+    disabled: {
+      control: 'boolean',
+      description: 'Whether the button is disabled',
+    },
+    type: {
+      control: 'select',
+      options: ['button', 'submit', 'reset'],
+      description: 'The type of the button',
+    },
+    fullWidth: {
+      control: 'boolean',
+      description: 'Whether the button should be full width',
+    },
+  },
 };
 export default meta;
 type Story = StoryObj<Button>;
