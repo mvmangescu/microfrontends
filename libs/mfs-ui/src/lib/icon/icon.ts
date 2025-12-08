@@ -5,7 +5,7 @@ export type IconName = 'home' | 'user' | 'settings' | 'menu' | 'close' | 'check'
 export type IconSize = 'sm' | 'md' | 'lg' | 'xl';
 
 @Component({
-  selector: 'lib-icon',
+  selector: 'mfs-icon',
   imports: [CommonModule],
   templateUrl: './icon.html',
   styleUrl: './icon.scss',

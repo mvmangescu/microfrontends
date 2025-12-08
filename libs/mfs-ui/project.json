@@ -2,7 +2,7 @@
   "name": "mfs-ui",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/mfs-ui/src",
-  "prefix": "lib",
+  "prefix": "mfs",
   "projectType": "library",
   "tags": [],
   "targets": {
