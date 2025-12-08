@@ -11,7 +11,8 @@
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/shell",
-        "browser": "apps/shell/src/main.ts",
+        "index": "apps/shell/src/index.html",
+        "main": "apps/shell/src/main.ts",
         "polyfills": ["zone.js"],
         "tsConfig": "apps/shell/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
