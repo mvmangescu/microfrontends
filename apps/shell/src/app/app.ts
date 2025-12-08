@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { Icon } from '@microfrontends/mfs-ui';
+import { Layout } from './layout/layout';
 
 @Component({
-  imports: [RouterModule, Icon],
+  imports: [Layout],
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
