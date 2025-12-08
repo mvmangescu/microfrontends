@@ -1,1 +1,1 @@
-export * from './lib/mfs-ui/mfs-ui';
+export * from './lib/icon/icon';
