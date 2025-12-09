@@ -1,0 +1,38 @@
+<div
+  class="dialog-container"
+  [class.dialog-info]="data.type === 'info'"
+  [class.dialog-success]="data.type === 'success'"
+  [class.dialog-warning]="data.type === 'warning'"
+  [class.dialog-danger]="data.type === 'danger'"
+>
+  <div class="dialog-header">
+    <div class="dialog-icon">
+      <mfs-icon [name]="iconName" size="lg"></mfs-icon>
+    </div>
+    <h2 class="dialog-title">{{ data.title }}</h2>
+    <button
+      class="dialog-close"
+      (click)="onCancel()"
+      (keyup.enter)="onCancel()"
+      aria-label="Close dialog"
+    >
+      <mfs-icon name="close" size="sm"></mfs-icon>
+    </button>
+  </div>
+
+  <div class="dialog-content">
+    <p class="dialog-message">{{ data.message }}</p>
+  </div>
+
+  <div class="dialog-actions">
+    <mfs-button #cancelButton [variant]="'outline'" (clicked)="onCancel()">
+      {{ data.cancelText }}
+    </mfs-button>
+    <mfs-button
+      [variant]="data.type === 'danger' ? 'danger' : 'primary'"
+      (clicked)="onConfirm()"
+    >
+      {{ data.confirmText }}
+    </mfs-button>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-export type IconName = 'home' | 'user' | 'settings' | 'menu' | 'close' | 'check' | 'arrow-right' | 'arrow-left';
+export type IconName = 'home' | 'user' | 'settings' | 'menu' | 'close' | 'check' | 'arrow-right' | 'arrow-left' | 'info' | 'warning' | 'error' | 'check-circle';
 export type IconSize = 'sm' | 'md' | 'lg' | 'xl';
 
 @Component({
@@ -34,7 +34,11 @@ export class Icon {
       'close': 'M6 18L18 6M6 6l12 12',
       'check': 'M5 13l4 4L19 7',
       'arrow-right': 'M14 5l7 7m0 0l-7 7m7-7H3',
-      'arrow-left': 'M10 19l-7-7m0 0l7-7m-7 7h18'
+      'arrow-left': 'M10 19l-7-7m0 0l7-7m-7 7h18',
+      'info': 'M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+      'warning': 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z',
+      'error': 'M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z',
+      'check-circle': 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
     };
     return icons[this.name];
   }
