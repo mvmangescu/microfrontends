@@ -10,6 +10,7 @@
       <mfs-icon [name]="iconName" size="lg"></mfs-icon>
     </div>
     <h2 class="dialog-title">{{ data.title }}</h2>
+    @if (!data.disableClose) {
     <button
       class="dialog-close"
       (click)="onCancel()"
@@ -18,6 +19,7 @@
     >
       <mfs-icon name="close" size="sm"></mfs-icon>
     </button>
+    }
   </div>
 
   <div class="dialog-content">

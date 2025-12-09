@@ -29,6 +29,10 @@ import { ConfirmationDialogService } from './confirmation-dialog.service';
         Open Danger Dialog
       </mfs-button>
 
+      <mfs-button variant="outline" (clicked)="openNonDismissible()">
+        Open Non-Dismissible Dialog
+      </mfs-button>
+
       @if (lastResult !== null) {
       <div
         style="padding: 1rem; background: #f3f4f6; border-radius: 0.5rem; margin-top: 1rem;"
@@ -83,6 +87,20 @@ class ConfirmationDialogDemoComponent {
         'Delete Item',
         'This action cannot be undone. Are you sure you want to delete this item?',
         'Delete'
+      )
+      .subscribe((result) => {
+        this.lastResult = result ?? false;
+      });
+  }
+
+  openNonDismissible(): void {
+    this.confirmationService
+      .confirm(
+        'Non-Dismissible Dialog',
+        'This dialog cannot be dismissed by clicking outside or pressing ESC. You must click a button.',
+        'Confirm',
+        'Cancel',
+        true
       )
       .subscribe((result) => {
         this.lastResult = result ?? false;

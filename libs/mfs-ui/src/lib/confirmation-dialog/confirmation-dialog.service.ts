@@ -18,7 +18,7 @@ export class ConfirmationDialogService {
   ): Observable<boolean | undefined> {
     const dialogRef = this.dialog.open<boolean>(ConfirmationDialog, {
       data,
-      disableClose: config?.disableClose ?? false,
+      disableClose: data.disableClose ?? config?.disableClose ?? false,
       hasBackdrop: config?.hasBackdrop ?? true,
       backdropClass: config?.backdropClass ?? 'cdk-overlay-dark-backdrop',
       width: config?.width,
@@ -36,7 +36,8 @@ export class ConfirmationDialogService {
     title: string,
     message: string,
     confirmText = 'Confirm',
-    cancelText = 'Cancel'
+    cancelText = 'Cancel',
+    disableClose = false
   ): Observable<boolean | undefined> {
     return this.open({
       title,
@@ -44,6 +45,7 @@ export class ConfirmationDialogService {
       confirmText,
       cancelText,
       type: 'info',
+      disableClose,
     });
   }
 
@@ -51,7 +53,8 @@ export class ConfirmationDialogService {
     title: string,
     message: string,
     confirmText = 'Confirm',
-    cancelText = 'Cancel'
+    cancelText = 'Cancel',
+    disableClose = false
   ): Observable<boolean | undefined> {
     return this.open({
       title,
@@ -59,6 +62,7 @@ export class ConfirmationDialogService {
       confirmText,
       cancelText,
       type: 'warning',
+      disableClose,
     });
   }
 
@@ -66,7 +70,8 @@ export class ConfirmationDialogService {
     title: string,
     message: string,
     confirmText = 'Delete',
-    cancelText = 'Cancel'
+    cancelText = 'Cancel',
+    disableClose = false
   ): Observable<boolean | undefined> {
     return this.open({
       title,
@@ -74,6 +79,7 @@ export class ConfirmationDialogService {
       confirmText,
       cancelText,
       type: 'danger',
+      disableClose,
     });
   }
 
@@ -81,7 +87,8 @@ export class ConfirmationDialogService {
     title: string,
     message: string,
     confirmText = 'OK',
-    cancelText = 'Cancel'
+    cancelText = 'Cancel',
+    disableClose = false
   ): Observable<boolean | undefined> {
     return this.open({
       title,
@@ -89,6 +96,7 @@ export class ConfirmationDialogService {
       confirmText,
       cancelText,
       type: 'success',
+      disableClose,
     });
   }
 }

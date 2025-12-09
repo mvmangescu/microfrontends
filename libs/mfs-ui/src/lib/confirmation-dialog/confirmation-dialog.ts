@@ -16,6 +16,7 @@ export interface ConfirmationDialogData {
   confirmText?: string;
   cancelText?: string;
   type?: 'info' | 'warning' | 'danger' | 'success';
+  disableClose?: boolean;
 }
 
 @Component({
